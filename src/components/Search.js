@@ -11,12 +11,12 @@ function Search() {
      })
   }, [])
    
-  function handleSearch(event){
-    
+  function handleSearch(e){
+    let hawayu = e.target.value
     const filteredArray = searchTrans.filter((name)=>{
+      console.log(hawayu)
     
-    
-      return name.description.toLowerCase().includes(event.target.value.toLowerCase())
+      return name.description === hawayu
     })
     console.log(filteredArray)
     return filteredArray
@@ -27,6 +27,7 @@ function Search() {
       <input
         type="text"
         placeholder="Search your Recent Transactions"
+        name="text"
         onChange={handleSearch}
       />
       <i className="circular search link icon"></i>

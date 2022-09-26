@@ -160,6 +160,13 @@
       "category": "Food",
       "amount": "300",
       "id": 39
+    },
+    {
+      "date": "2022-09-15",
+      "description": "Honey",
+      "category": "Beverage",
+      "amount": "200",
+      "id": 40
     }
   ]
 }
