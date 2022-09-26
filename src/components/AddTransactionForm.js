@@ -1,12 +1,30 @@
 import React, {useState, useEffect} from "react";
 
 function AddTransactionForm() {
- const[addTrans, setAddTrans]=useState([])
+ const[addTrans, setAddTrans]=useState({})
+ function handleSubmit(){
+  
+    fetch('http://localhost:8001/transactions', {
+      method:"POST",
+      headers: {
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify(addTrans)
+    })
+  
 
+  }
+  
+ 
+  function handleChange(event){
+    setAddTrans({...addTrans, 
+    [event.target.name]:event.target.value})
+    console.log(event.target.value)
+  }
 
   return (
     <div className="ui segment">
-      <form className="ui form">
+      <form className="ui form" onChange={handleChange} onSubmit={handleSubmit}>
         <div className="inline fields">
           <input type="date" name="date" />
           <input type="text" name="description" placeholder="Description" />
