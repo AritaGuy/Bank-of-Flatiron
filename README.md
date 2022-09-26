@@ -25,8 +25,8 @@ After unbundling the project:
 2. Run `npm run server`. This will run your backend on port `8001`.
 3. In a new terminal, run `npm start`. This will run your React app on port `8000`.
 
-Make sure to open
-[(http://localhost:8001/transactions) in thehttp://localhost:8001/transactions]
+Make sure to openhttp://localhost:8001/transactions
+[() in thehttp://localhost:8001/transactions]
 browser to verify that your backend is working before you proceed!
 
 The app uses [Semantic UI](https://semantic-ui.com/) for styling. If you see any
